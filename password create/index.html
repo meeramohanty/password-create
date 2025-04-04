@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+</head>
+<body>
+    <h1>Password Generator & Strength Checker</h1>
+
+    <div class="container mt-5 card">
+    
+      <div>
+        <label for="passwordInput" class="form-label">Password Strength: <b id="strengthText"></b></label>
+        <div class="input-group mt-2 white-bg">
+          <input type="password" id="passwordInput" class="form-control  mx-2" placeholder="Type or generate a password...">
+          <button class="btn" id="togglePassword"><span class="material-symbols-rounded">
+    visibility
+    </span><span class="material-symbols-rounded">
+    visibility_off
+    </span></button>
+          <button class="btn" id="tipsBtn"><span class="material-symbols-rounded">
+    settings
+    </span></button>
+          <div class="strength-meter">
+            <div class="strength-bar"></div>
+          </div>
+    
+        </div>
+        <div class="d-flex flex-wrap align-items-center justify-content-start gap-1 column-gap-3 py-3 error-text">
+          <div id="pleaseAdd"><b>Please Add:</b></div>
+          <div id="errorLength">16 Chars</div>
+          <div id="errorUppercase">Uppercase</div>
+          <div id="errorLowercase">Lowercase</div>
+          <div id="errorNumber">Number</div>
+          <div id="errorSymbol">Symbol</div>
+        </div>
+    
+        <div class="d-flex align-items-center justify-content-center gap-3 pt-5">
+          
+          <button id="generateBtn" type="button" class="btn btn-primary">Generate</button>
+          <button id="copyBtn" type="button" class="btn btn-light">Copy</button>
+    
+    
+          
+        </div>
+      </div>
+    
+      <!-- Tips Modal -->
+      <div class="modal fade" id="tipsModal" tabindex="-1" aria-labelledby="tipsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="tipsModalLabel">Settings</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="passwordLength" class="form-label">Password Length:</label>
+                <input type="number" id="passwordLength" class="form-control" min="12" max="32" value="16">
+              </div>
+    
+              <div class="mb-3">
+                <input type="checkbox" id="includeUppercase" checked> Include Uppercase Letters (A-Z)<br>
+                <input type="checkbox" id="includeLowercase" checked> Include Lowercase Letters (a-z)<br>
+                <input type="checkbox" id="includeNumbers" checked> Include Numbers (0-9)<br>
+                <input type="checkbox" id="includeSymbols" checked> Include Symbols (@#$%^&*!)<br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="copyToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            Password copied successfully!
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Global Styles */
+body {
+  background: #f9fafb;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding: 16px;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #101828;
+	text-align: center;
+	display: block;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+b {
+  font-weight: 600;
+}
+
+/* Input & Button Styles */
+#passwordInput,
+#passwordInput:focus,
+#passwordInput:focus-visible {
+  border: none;
+  box-shadow: none;
+  height: 4rem;
+  font-size: 1.3rem;
+  background: transparent;
+}
+
+.btn:focus {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.btn {
+  font-size: 0.95rem;
+  padding: 0.625rem 0.875rem;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Button Colors */
+.btn-primary {
+  background-color: #4f39f6;
+}
+
+.btn-primary:hover {
+  background-color: #615fff;
+}
+
+.btn-light {
+  background-color: transparent;
+  color: #101828;
+}
+
+/* Toggle Password Visibility */
+#togglePassword .material-symbols-rounded:nth-child(1) {
+  display: none;
+}
+
+/* Card Styles */
+.card {
+  padding: 3.75vw 5.75vw;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  border: none;
+  border-radius: 1.75rem;
+}
+
+/* Error Text */
+.error-text div {
+  font-size: 0.85em;
+  color: #6a7282;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.validated {
+  color: green !important;
+  display: none !important;
+}
+
+/* Strength Meter */
+.strength-meter {
+  height: 4px;
+  width: 105%;
+  background: #f9fafc !important;
+  overflow: hidden;
+}
+
+.strength-bar {
+  height: 100%;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Form Labels */
+.form-label {
+  color: #101828;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Background & Colors */
+.white-bg {
+  background: white;
+}
+
+.primary-bg {
+  background: red;
+}
+
+.bg-success {
+  background-color: #31C48D !important;
+  font-weight: 600;
+}
+
+#errorLength, #errorUppercase, #errorLowercase, #errorNumber, #errorSymbol {
+  font-size: 0.85em;
+  color: #6a7282 !important;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+#errorLength {
+  color: #101828;
+}
+
+#pleaseAdd {
+  color: #F05252;
+}
+
+/* Toast Styles */
+.toast-container {
+  position-fixed;
+  bottom: 0;
+  end: 0;
+  p-3;
+}
+
+.toast {
+  background-color: #0E9F6E !important;
+  font-weight: 600;
+}
+
+/* Miscellaneous */
+input[type="number"] {
+  font-size: 1rem;
+}
+
+.input-group {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  padding-top: 4px;
+  background: #f9fafc !important;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+#passwordLength {
+  font-size: 1rem;
+}
+
+/* Modal */
+.modal-content {
+  padding: 16px;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+}
